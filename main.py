@@ -3,8 +3,6 @@ import requests
 import yfinance as yf
 
 
-
-
 def get_stock_price(symbol):
     ticker = yf.Ticker(symbol)
     return ticker.info.get('regularMarketPrice') or ticker.fast_info.last_price
